@@ -14,7 +14,7 @@ $input->setOrderId(FlashPayConfig::PARTNER_CODE . date("YmdHis"));
 $input->setDescription("test");
 $input->setPrice("1");
 $input->setCurrency("CAD");
-$input->setNotifyUrl("https://www.flashpayment.com//notify_url");
+$input->setNotifyUrl("https://pay.alphapay.ca//notify_url");
 $input->setOperator("123456");
 $currency = $input->getCurrency();
 if (!empty($currency) && $currency == 'CNY') {
@@ -35,7 +35,7 @@ $result = FlashPayApi::jsApiOrder($input);
 //跳转
 $inputObj = new FlashPayJsApiRedirect();
 $inputObj->setDirectPay('true');
-$inputObj->setRedirect(urlencode('http://www.flashpayment.com?order_id=' . strval($input->getOrderId())));
+$inputObj->setRedirect(urlencode('http://pay.alphapay.ca?order_id=' . strval($input->getOrderId())));
 ?>
 
 <html>

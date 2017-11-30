@@ -19,7 +19,7 @@ $input->setOrderId(FlashPayConfig::PARTNER_CODE . date("YmdHis"));
 $input->setDescription("test");
 $input->setPrice("100");
 $input->setCurrency("CAD");
-$input->setNotifyUrl("https://www.flashpayment.com//notify_url");
+$input->setNotifyUrl("https://pay.alphapay.ca//notify_url");
 $input->setDeviceId("18651874535");
 $input->setOperator("123456");
 $currency = $input->getCurrency();
